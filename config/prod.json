@@ -1,0 +1,22 @@
+{
+  "log": {
+    "level": "debug"
+  },
+  "express": {
+    "port": 5001
+  },
+  "mongo": {
+    "url": "mongodb://localhost/classapi",
+    "options": {
+      "server": {
+        "poolSize": 10,
+        "socketOptions": {
+          "socketTimeoutMS": 30000,
+          "connectTimeoutMS": 30000
+        },
+        "auto_reconnect": true,
+        "reconnectTries": 9999999
+      }
+    }
+  }
+}
