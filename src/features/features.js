@@ -14,7 +14,7 @@
 
 import express from './express'
 import mongo from './mongoose'
-import winston from 'winston'
+
 // import auth from './auth'
 import routes from './routes'
 

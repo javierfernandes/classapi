@@ -12,8 +12,8 @@ class MongooseFeature {
   }
   teardown() {
     return mongoose.connection._closeCalled ?
-        Promise.resolve()
-        : mongoose.connection.close()
+      Promise.resolve()
+      : mongoose.connection.close()
   }
 }
 

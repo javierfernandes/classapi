@@ -9,6 +9,6 @@ router.get('/', (req, res) => { res.status(200).json({
     name: packageInfo.name,
     version: packageInfo.version
   }
-})})
+}) })
 
 export default router

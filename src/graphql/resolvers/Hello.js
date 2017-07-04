@@ -1,7 +1,9 @@
 export default {
   Query: {
-    async users() {
-      return User.find({})
+    async hello() {
+      return {
+        greeting: 'hello'
+      }
     }
   }
 }
