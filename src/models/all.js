@@ -1,3 +1,3 @@
 
-export * from './User'
-export * from './Subject'
+import './User'
+import './Subject'
