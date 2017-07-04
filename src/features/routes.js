@@ -1,11 +1,13 @@
 import winston from 'winston'
 
 import index from '../routes/index'
+import graphql from '../routes/graphql'
 
 class RoutesFeature {
 
   setup(app) {
     app.use('/', index)
+    app.use('/graphql', graphql)
 
     // errors
     app.use(::this.logErrors)

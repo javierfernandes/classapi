@@ -1,0 +1,4 @@
+
+type HelloResponse {
+  greeting: String
+}
