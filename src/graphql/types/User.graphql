@@ -1,0 +1,10 @@
+
+type User {
+  name: String
+  roles: [Role]
+}
+
+enum Role {
+  PROFESSOR
+  ADMIN
+}

@@ -1,8 +1,10 @@
+import path from 'path'
 import methodOverride from 'method-override'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import compression from 'compression'
 import expressPromise from 'express-promise'
+import favicon from 'serve-favicon'
 
 class ExpressFeature {
 
@@ -13,6 +15,7 @@ class ExpressFeature {
 
   middlewares(config) {
     const m = [
+      favicon(path.join(__dirname, '..', '..', 'public', 'favicon.png')),
       methodOverride(),
       bodyParser.urlencoded({ extended: 'true' }),
       bodyParser.json(),
