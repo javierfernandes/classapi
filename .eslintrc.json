@@ -4,7 +4,11 @@
   "plugins": [
     "mocha"
   ],
+  "env": {
+    "mocha": true
+  },
   "rules": {
+    "space-in-parens": "warn",
     "mocha/no-exclusive-tests": "error",
     "comma-dangle": [ 2, "never" ],
     "semi": 0,

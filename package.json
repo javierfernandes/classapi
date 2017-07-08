@@ -6,9 +6,11 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.0.2",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.1",
@@ -17,12 +19,15 @@
     "gulp": "^3.9.1",
     "gulp-cli": "^1.3.0",
     "gulp-eslint": "^4.0.0",
+    "mocha": "^3.4.2",
+    "mockgoose": "^7.3.3",
     "nodemon": "^1.11.0"
   },
   "scripts": {
     "build": "babel src/ -d lib/",
     "prepublish": "yarn run build",
     "start": "nodemon --exec NODE_ENV=dev babel-node -- src/index",
+    "test": "export NODE_ENV=test && export NODE_PATH=./ && mocha --require test/setup.js --compilers js:babel-register --recursive test",
     "lint": "eslint",
     "lint-all": "eslint src/* test/*",
     "lint-fix-all": "eslint --fix src/* test/*"
