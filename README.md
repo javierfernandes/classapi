@@ -105,7 +105,7 @@ They **must have a default export, exporting an object including the fields you 
 
 For example to resolve a query, as they all are merged into the root **Query** type, you must export and object with this structure
 
-```json
+```js
 {
   Query: {
      query1() {},
